@@ -8,11 +8,11 @@ public class RepositorioEmpleados {
         if (empleados.containsKey(empleado.getCedula())){
             return false;
         }
-        Empleados.put(empleado,getCedula(), empleado);
+        empleados.put(empleado.getCedula(), empleado);
         return true;
     }
-    public empleadoBase buscar (String Cedula){
-        return empleados.get(cedula);
+    public EmpleadoBase buscar (String Cedula){
+        return empleados.get(Cedula);
     }
     public boolean actualizar(EmpleadoBase empleado){
         if (!empleados.containsKey(empleado.getCedula())){
@@ -25,6 +25,6 @@ public class RepositorioEmpleados {
         return empleados.remove(cedula) !=null;
     }
     public ArrayList<EmpleadoBase> ListarTodos(){
-        return new Arraylist<>(empleados.values());
+        return new ArrayList<>(empleados.values());
     }
 }

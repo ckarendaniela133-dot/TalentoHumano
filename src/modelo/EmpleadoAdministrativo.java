@@ -1,9 +1,9 @@
 package modelo;
 
-public class EmpleadoAdministrativo {
+public class EmpleadoAdministrativo extends EmpleadoBase  {
     private double bonificacion;
     public EmpleadoAdministrativo(String cedula, String nombre,
-                                  double salarioBase, double bonificaion){
+                                  double salarioBase, double bonificacion){
         super(cedula, nombre, salarioBase);
         this.bonificacion = bonificacion;
     }
@@ -16,6 +16,6 @@ public class EmpleadoAdministrativo {
     }
     @Override
     public String getTipo(){
-        return "Administartivo";
+        return "Administrativo";
     }
 }
